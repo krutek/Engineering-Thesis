@@ -1,0 +1,58 @@
+﻿<Window x:Class="Klient.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Klient.Views" xmlns:viewmodels="clr-namespace:Klient.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ShellViewModel}"
+        mc:Ignorable="d"
+        Title="ShellView" Height="550" Width="950">
+    <Grid Background="#82B1FF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Grid Background="#FF0069C0" Height="10" />
+        </StackPanel>
+        <Grid Background="#3700BF" Grid.Column="0">
+            <ListView  Margin="0 100" >
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <Button  x:Name="loadMainMenu">
+                            <materialDesign:PackIcon Kind="ViewDashboard" Height="30" Width="30" VerticalAlignment="Center" Margin="5" FontFamily="Champagne &amp; Limousines"/>
+                        </Button>
+                        <TextBlock Text=" Dostępne w bazie " FontSize="22" VerticalAlignment="Center" Margin="20 0" Foreground="White" FontFamily="Champagne &amp; Limousines"></TextBlock>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60" >
+                    <StackPanel Orientation="Horizontal" >
+                        <Button x:Name="loadModifyData">
+                            <materialDesign:PackIcon Kind="SendCircle" Height="30" Width="30" VerticalAlignment="Center"  Margin="5" FontFamily="Champagne &amp; Limousines"/>
+                        </Button>
+                        <TextBlock Text=" Dodaj/Usuń z Bazy  " FontSize="22" VerticalAlignment="Center" Margin="20 0"  Foreground="White"  FontFamily="Champagne &amp; Limousines"></TextBlock>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60" >
+                    <StackPanel Orientation="Horizontal" >
+                        <Button x:Name="loadSearchMenu">
+                            <materialDesign:PackIcon Kind="DatabaseCheck" Height="30" Width="30" VerticalAlignment="Center" Margin="5" FontFamily="Champagne &amp; Limousines"/>
+                        </Button>
+                        <TextBlock Text=" Archiwum bazy   " FontSize="22" VerticalAlignment="Center" Margin="20 0"  Foreground="White"  FontFamily="Champagne &amp; Limousines"></TextBlock>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Name="ExitPanel">
+                        <Button x:Name="exit">
+                            <materialDesign:PackIcon Kind="ExitRun" Height="30" Width="30" VerticalAlignment="Center" Margin="5"  FontFamily="Champagne &amp; Limousines"/>
+                        </Button>
+                        <TextBlock Text=" Wyjdź " FontSize="22" Foreground="White"  VerticalAlignment="Center" Margin="20 0"  FontFamily="Champagne &amp; Limousines"></TextBlock>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+        </Grid>
+        <Grid  Grid.Column="1" Margin=" 100 50 100 50 " >
+            <ContentControl x:Name="ActiveItem" ></ContentControl>
+        </Grid>
+    </Grid>
+</Window>

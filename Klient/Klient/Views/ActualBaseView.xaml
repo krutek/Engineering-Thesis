@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Klient.Views.ActualBaseView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Klient.Views"
+             xmlns:cal="http//www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="900">
+    <Grid Background="#82B1FF" Width="900" Height="900">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <DataGrid VerticalAlignment="Top" ItemsSource="{Binding Bindable}" SelectedItem="{Binding Path=SelectedProduct,Mode=TwoWay}" Margin="10" AlternatingRowBackground="LightBlue"
+                  CanUserAddRows="False" AutoGenerateColumns="False" Background="#82B1FF" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nazwa " Binding="{Binding Path=name}"/>
+                    <DataGridTextColumn Header="Producent" Binding="{Binding Path=producer}"/>
+                    <DataGridTextColumn Header="Ilość w magazynie" Binding="{Binding Path=quantity}"/>
+                    <DataGridTextColumn Header="Cena" Binding="{Binding Path=price}"/>
+                    <DataGridTextColumn Header="Kod EAN" Binding="{Binding Path=ean}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid Grid.Row="1" >
+            <StackPanel >
+                <TextBlock FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" MaxHeight="125" MaxWidth="250"> Szukaj po typie</TextBlock>
+                <ComboBox  x:Name="BindableTypes"  SelectedItem="{Binding Path=SelectedType, Mode=TwoWay}" Margin="10" >
+                </ComboBox>
+                <Button MaxWidth="300" Margin="15" x:Name="SearchFromType">Szukaj</Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2" >
+            <StackPanel>
+                <TextBlock FontSize="20" FontFamily="Arial" HorizontalAlignment="Center"> Podaj ilość</TextBlock>
+                <TextBox MaxWidth="100" Margin="15" x:Name="Quantity" ></TextBox>
+                <Button MaxWidth="300" Margin="15" x:Name="SellProduct" >Sprzedaj</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,9 @@
+C:\Users\Krute\Desktop\Programowanie\RozwijanieInżynierki\Serwer\DataBase\obj\Debug\netcoreapp3.1\DataBase.AssemblyInfoInputs.cache
+C:\Users\Krute\Desktop\Programowanie\RozwijanieInżynierki\Serwer\DataBase\obj\Debug\netcoreapp3.1\DataBase.AssemblyInfo.cs
+C:\Users\Krute\Desktop\Programowanie\RozwijanieInżynierki\Serwer\DataBase\obj\Debug\netcoreapp3.1\DataBase.csproj.CoreCompileInputs.cache
+C:\Users\Krute\Desktop\Programowanie\RozwijanieInżynierki\Serwer\DataBase\bin\Debug\netcoreapp3.1\DataBase.deps.json
+C:\Users\Krute\Desktop\Programowanie\RozwijanieInżynierki\Serwer\DataBase\bin\Debug\netcoreapp3.1\DataBase.dll
+C:\Users\Krute\Desktop\Programowanie\RozwijanieInżynierki\Serwer\DataBase\bin\Debug\netcoreapp3.1\DataBase.pdb
+C:\Users\Krute\Desktop\Programowanie\RozwijanieInżynierki\Serwer\DataBase\obj\Debug\netcoreapp3.1\DataBase.dll
+C:\Users\Krute\Desktop\Programowanie\RozwijanieInżynierki\Serwer\DataBase\obj\Debug\netcoreapp3.1\DataBase.pdb
+C:\Users\Krute\Desktop\Programowanie\RozwijanieInżynierki\Serwer\DataBase\obj\Debug\netcoreapp3.1\DataBase.csprojAssemblyReference.cache
